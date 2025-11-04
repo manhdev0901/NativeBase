@@ -39,21 +39,21 @@ export const useKeyboardDismissable = ({ enabled, callback }: IParams) => {
     };
   }, [enabled, callback]);
 
-  useBackHandler({ enabled, callback });
+  // useBackHandler({ enabled, callback });
 };
 
-export function useBackHandler({ enabled, callback }: IParams) {
-  useEffect(() => {
-    let backHandler = () => {
-      callback();
-      return true;
-    };
-    if (enabled) {
-      BackHandler.addEventListener('hardwareBackPress', backHandler);
-    } else {
-      BackHandler.removeEventListener('hardwareBackPress', backHandler);
-    }
-    return () =>
-      BackHandler.removeEventListener('hardwareBackPress', backHandler);
-  }, [enabled, callback]);
-}
+// export function useBackHandler({ enabled, callback }: IParams) {
+//   useEffect(() => {
+//     let backHandler = () => {
+//       callback();
+//       return true;
+//     };
+//     if (enabled) {
+//       BackHandler.addEventListener('hardwareBackPress', backHandler);
+//     } else {
+//       BackHandler.removeEventListener('hardwareBackPress', backHandler);
+//     }
+//     return () =>
+//       BackHandler.removeEventListener('hardwareBackPress', backHandler);
+//   }, [enabled, callback]);
+// }
