@@ -1,6 +1,6 @@
 import React from 'react';
-import { useEffect } from 'react';
-import { BackHandler } from 'react-native';
+// import { useEffect } from 'react';
+// import { BackHandler } from 'react-native';
 
 type IParams = {
   enabled?: boolean;
